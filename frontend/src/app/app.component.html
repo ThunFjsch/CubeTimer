@@ -1,0 +1,68 @@
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="header-toolbar mat-elevation-z15" color="primary">
+    <button mat-icon-button (click)="sideNav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="header-wrapper">
+      <h1 class="cube-timer">CubeTimer</h1>
+      <div class="header-button-wrapper">
+        <button
+          mat-raised-button
+          class="header-button"
+          color="accent"
+          (click)="onClickOpenLoginDialog()"
+        >
+          Login
+        </button>
+        <button
+          mat-raised-button
+          class="header-button"
+          color=""
+          (click)="onClickOpenSignupDialog()"
+        >
+          Signup
+        </button>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #sideNav
+      [mode]="'over'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
+      <mat-nav-list>
+        <a routerLink="/timer" mat-list-item>
+          <mat-icon mat-list-item color="primary">timer</mat-icon>
+          <p class="nav-text-item">SpeedCube Timer</p>
+        </a>
+        <a routerLink="/statistics" mat-list-item>
+          <mat-icon mat-list-item color="accent">home</mat-icon>
+          <p class="nav-text-item">Statistics</p>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="icon-side">
+        <mat-nav-list>
+          <mat-list-item>
+            <a routerLink="/timer">
+              <mat-icon mat-list-item color="primary">timer</mat-icon>
+            </a>
+          </mat-list-item>
+          <mat-list-item>
+            <a routerLink="/statistics">
+              <mat-icon mat-list-item color="accent">home</mat-icon>
+            </a>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
