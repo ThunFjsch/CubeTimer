@@ -1,6 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+<<<<<<< HEAD
 frontend/dist
 frontend/tmp
 frontend/out-tsc
@@ -21,6 +22,28 @@ frontend/.classpath
 frontend/.c9/
 *.launch
 frontend/.settings/
+=======
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+>>>>>>> initial commit with scramble of FE
 *.sublime-workspace
 
 # IDE - VSCode
@@ -29,6 +52,7 @@ frontend/.settings/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+<<<<<<< HEAD
 frontend/.history/*
 
 # misc
@@ -40,6 +64,19 @@ frontend/npm-debug.log
 frontend/yarn-error.log
 frontend/testem.log
 frontend/typings
+=======
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+>>>>>>> initial commit with scramble of FE
 
 # System Files
 .DS_Store
